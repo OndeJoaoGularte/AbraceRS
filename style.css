@@ -249,22 +249,40 @@ nav a:hover::after {
     gap: 15px;
 }
 
-.diretores{
-    height: 275px;
+.somos{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 25px;
+    gap: 25px;
 }
 
-.diretores img{
+.somos img{
     height: 180px;
-    border-radius: 15px;
     border: solid black 2px;
 }
 
-.diretores strong{
+.somos strong{
     color: var(--cor-secundaria);
+}
+
+.diretores{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.diretores div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+}
+
+.diretores div .nome{
+    margin: 5px 0;
 }
 
 .comoatuamos{
@@ -299,7 +317,7 @@ footer .contato{
     gap: 25px;
 }
 
-footer .contato img{
+footer img{
     height: 24px;
 }
 
@@ -334,6 +352,19 @@ footer .contato .redes{
     align-items: center;
     justify-content: flex-end;
     width: 300px;
+}
+
+.redes a {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.redes a img {
+    height: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.redes a:hover {
+    transform: scale(1.2);
 }
 
 footer .dev{
