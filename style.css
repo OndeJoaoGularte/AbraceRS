@@ -79,6 +79,20 @@ nav a:hover::after {
     transform: scaleX(1);
 }
 
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-principal);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-nav ul{
+    padding-left: 15px;
+}
+
 /*  */
 
 /* Carrossel */
@@ -219,6 +233,7 @@ nav a:hover::after {
 
 .faixa h2{
     color: white;
+    font-size: 28px;
 }
 
 /*  */
