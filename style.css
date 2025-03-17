@@ -222,6 +222,26 @@ nav a:hover::after {
     font-weight: bold;
 }
 
+.maxima2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+}
+
+.maxima2 h2{
+    color: var(--cor-secundaria);
+    font-size: 28px;
+    text-align: center;
+}
+.maxima2 h2:nth-child(2){
+    font-size: 32px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .faixa{
     background-color: var(--cor-secundaria);
     border-top: solid black 2px;
@@ -305,18 +325,50 @@ nav a:hover::after {
     align-items: center;
     flex-direction: column;
     padding: 0px 140px;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
     gap: 15px;
     font-size: 18px;
     background: linear-gradient(0deg, white 0%, white 0%, #D76978 100%);
 }
 
-.comoatuamos h1{
-    text-align: center;
-}
-
 .comoatuamos p{
     text-align: justify;
+}
+
+.campanha{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 140px;
+    padding-bottom: 15px;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.campanha p{
+    text-align: left;
+}
+
+.campanha img{
+    height: 600px;
+    border: solid 2px black;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+
+.campanha .coletas{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.campanha .coletas div{
+    width: 180px;
+}
+
+.campanha .coletas a{
+    text-decoration: none;
+    color: var(--cor-secundaria);
 }
 
 /*  */
