@@ -28,3 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function abrirQRCode() {
+    const modal = document.getElementById("qrCodeModal");
+    modal.style.display = "flex";
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            fecharQRCode();
+        }
+    }
+}
+
+function fecharQRCode() {
+    document.getElementById("qrCodeModal").style.display = "none";
+    window.onclick = null;
+}
+
