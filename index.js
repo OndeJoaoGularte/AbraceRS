@@ -44,4 +44,3 @@ function fecharQRCode() {
     document.getElementById("qrCodeModal").style.display = "none";
     window.onclick = null;
 }
-

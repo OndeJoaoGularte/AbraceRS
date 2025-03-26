@@ -21,7 +21,7 @@ html{
 body{
     height: 100vh;
     width: 100vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', 'Roboto', sans-serif;
     overflow-x: hidden;
 }
 
@@ -216,6 +216,7 @@ nav a:hover::after {
     font-size: 28px;
     text-align: center;
 }
+
 .maxima h2:nth-child(2){
     font-size: 32px;
     text-decoration: underline;
@@ -236,6 +237,7 @@ nav a:hover::after {
     font-size: 28px;
     text-align: center;
 }
+
 .maxima2 h2:nth-child(2){
     font-size: 32px;
     text-decoration: underline;
@@ -367,21 +369,12 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0px 140px;
-    padding-bottom: 15px;
-    gap: 15px;
-    font-size: 18px;
-}
-
-.campanha p{
-    text-align: left;
 }
 
 .campanha img{
-    height: 600px;
+    width: 50%;
     border: solid 2px black;
     border-radius: 15px;
-    margin: 25px 0;
 }
 
 /*  */
@@ -555,6 +548,38 @@ footer .dev{
         margin-top: 55%;
     }
     
+    .maxima h2{
+        color: var(--cor-principal);
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .maxima h2:nth-child(2){
+        font-size: 28px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .maxima2 h2{
+        color: var(--cor-principal);
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .maxima2 h2:nth-child(2){
+        font-size: 28px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .faixa{
+        padding: 50px 0;
+    }
+    
+    .faixa h2{
+        font-size: 24px;
+    }
+
     .donate{
         border-radius: 0px;
         border: solid 0px black;
@@ -562,105 +587,74 @@ footer .dev{
         margin-bottom: 35px;
     }
 
-    /*
-
     .quemsomos{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 0 140px;
-        font-size: 18px;
-        gap: 25px;
-    }
-
-    .quemsomos h1{
-        text-align: center;
-    }
-
-    .quemsomos p{
-        text-align: justify;
-    }
-
-    .quem{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .somos{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 25px;
-        gap: 25px;
-    }
-
-    .somos img{
-        height: 180px;
-        border: solid black 2px;
-    }
-
-    .somos strong{
-        color: var(--cor-secundaria);
+        padding: 0 50px;
+        font-size: 14px;
     }
 
     .diretores{
-        display: flex;
-        flex-direction: row;
-        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .somos img{
+        height: 150px;
     }
 
     .diretores div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 180px;
+        width: 150px;
     }
 
     .diretores div .nome{
-        margin: 5px 0;
+        font-size: 14px;
+        margin: 2px 0;
+    }
+
+    .diretores div strong{
+        font-size: 14px;
     }
 
     .comoatuamos{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 0px 140px;
-        padding-bottom: 25px;
-        gap: 15px;
-        font-size: 18px;
-        background: linear-gradient(0deg, white 0%, white 0%, #D76978 100%);
-    }
-
-    .comoatuamos p{
-        text-align: justify;
-    }
-
-    .campanha{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 0px 140px;
+        padding: 0px 50px;
+        font-size: 14px;
         padding-bottom: 15px;
-        gap: 15px;
-        font-size: 18px;
-    }
-
-    .campanha p{
-        text-align: left;
     }
 
     .campanha img{
-        height: 600px;
-        border: solid 2px black;
-        border-radius: 15px;
-        margin: 25px 0;
+        width: 100%;
+        border-radius: 0px;
     }
-    
-    */
+
+    footer{
+        font-size: 14px;
+    }
+
+    footer .contato{
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    footer img{
+        height: 24px;
+    }
+
+    footer .contato .telefone{
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        padding-top: 25px;
+    }
+
+    footer .contato .loc{
+        width: 300px;
+    }
+
+    footer .contato .redes{
+        justify-content: center;
+        width: 300px;
+        padding-bottom: 25px;
+    }
 
 }
 
