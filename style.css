@@ -208,8 +208,7 @@ nav a:hover::after {
     gap: 5px;
     justify-content: center;
     align-items: center;
-    padding: 70px 0;
-    padding-bottom: 35px;
+    padding: 35px 0;
 }
 
 .maxima h2{
@@ -517,4 +516,155 @@ footer .dev{
     font-size: 24px;
     cursor: pointer;
     color: #333;
+}
+
+/* Responsividade */
+
+/* Smartphones */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fixed-nav ul{
+        padding-left: 0px;
+    }
+
+    .carrossel{
+        padding-top: 0px;
+    }
+
+    .slider {
+        max-width: 100%;
+        height: 55%;
+        border-radius: 0;
+    }
+
+    .labels{
+        width: 100%;
+        margin-top: 55%;
+    }
+
+    .slide img{
+        max-width: 100%;
+    }
+    
+    .navegacao{
+        width: 100%;
+        margin-top: 55%;
+    }
+    
+    .donate{
+        border-radius: 0px;
+        border: solid 0px black;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    /*
+
+    .quemsomos{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 140px;
+        font-size: 18px;
+        gap: 25px;
+    }
+
+    .quemsomos h1{
+        text-align: center;
+    }
+
+    .quemsomos p{
+        text-align: justify;
+    }
+
+    .quem{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .somos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 25px;
+        gap: 25px;
+    }
+
+    .somos img{
+        height: 180px;
+        border: solid black 2px;
+    }
+
+    .somos strong{
+        color: var(--cor-secundaria);
+    }
+
+    .diretores{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .diretores div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+    }
+
+    .diretores div .nome{
+        margin: 5px 0;
+    }
+
+    .comoatuamos{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 140px;
+        padding-bottom: 25px;
+        gap: 15px;
+        font-size: 18px;
+        background: linear-gradient(0deg, white 0%, white 0%, #D76978 100%);
+    }
+
+    .comoatuamos p{
+        text-align: justify;
+    }
+
+    .campanha{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 140px;
+        padding-bottom: 15px;
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    .campanha p{
+        text-align: left;
+    }
+
+    .campanha img{
+        height: 600px;
+        border: solid 2px black;
+        border-radius: 15px;
+        margin: 25px 0;
+    }
+    
+    */
+
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    
 }
