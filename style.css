@@ -84,7 +84,7 @@ nav a:hover::after {
     transform: scaleX(1);
 }
 
-.barra-fixa {
+.barra-fixa{
     position: fixed;
     top: 0;
     left: 0;
@@ -409,7 +409,7 @@ footer .contato .redes{
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    max-width: 300px;
+    width: 300px;
 }
 
 .redes a {
