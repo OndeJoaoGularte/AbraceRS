@@ -1,14 +1,19 @@
 :root{
     --cor-principal: #23BEE1;
     --cor-secundaria: #D76978;
+
+    --tamanho-fonte1: 1em;
+    --tamanho-fonte2: 1.2em;
+    --tamanho-fonte3: 1.3em;
+    --tamanho-fonte4: 1.7em;
+    --tamanho-fonte5: 2em;
+    --tamanho-fonte6: 2.2em;
 }
 
 *{
-    /* border: #a31b1b solid 1px; */
     margin: 0;
     padding: 0;
     outline: 0;
-    appearance: 0;
     border: 0;
     text-decoration: none;
     box-sizing: border-box;
@@ -22,7 +27,7 @@ body{
     height: 100vh;
     width: 100vw;
     font-family: 'Nunito', 'Roboto', sans-serif;
-    /*overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -59,7 +64,7 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: var(--tamanho-fonte2);
     position: relative;
 }
 
@@ -79,7 +84,7 @@ nav a:hover::after {
     transform: scaleX(1);
 }
 
-.fixed-nav {
+.barra-fixa {
     position: fixed;
     top: 0;
     left: 0;
@@ -89,7 +94,7 @@ nav a:hover::after {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.fixed-nav ul{
+.barra-fixa ul{
     padding-left: 15px;
 }
 
@@ -145,7 +150,11 @@ nav a:hover::after {
     transition: 1s;
 }
 
-.manual-btn:hover{
+.manual-btn:hover,
+#radio1:checked ~ .navegacao .auto-btn1,
+#radio2:checked ~ .navegacao .auto-btn2,
+#radio3:checked ~ .navegacao .auto-btn3,
+#radio4:checked ~ .navegacao .auto-btn4 {
     background-color: white;
 }
 
@@ -182,27 +191,11 @@ nav a:hover::after {
     gap: 40px;
 }
 
-#radio1:checked ~ .navegacao .auto-btn1{
-    background-color: white;
-}
-
-#radio2:checked ~ .navegacao .auto-btn2{
-    background-color: white;
-}
-
-#radio3:checked ~ .navegacao .auto-btn3{
-    background-color: white;
-}
-
-#radio4:checked ~ .navegacao .auto-btn4{
-    background-color: white;
-}
-
 /*  */
 
 /* Divisórias */
 
-.maxima{
+.apelo{
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -211,19 +204,20 @@ nav a:hover::after {
     padding: 35px 0;
 }
 
-.maxima h2{
+.apelo h2{
     color: var(--cor-principal);
-    font-size: 28px;
+    font-size: var(--tamanho-fonte6);
     text-align: center;
 }
 
-.maxima h2:nth-child(2){
-    font-size: 32px;
+.apelo h2:nth-child(2),
+.apelo2 h2:nth-child(2){
+    font-size: var(--tamanho-fonte6);
     text-decoration: underline;
     font-weight: bold;
 }
 
-.maxima2{
+.apelo2{
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -232,19 +226,13 @@ nav a:hover::after {
     padding: 70px 0;
 }
 
-.maxima2 h2{
+.apelo2 h2{
     color: var(--cor-secundaria);
-    font-size: 28px;
+    font-size: var(--tamanho-fonte6);
     text-align: center;
 }
 
-.maxima2 h2:nth-child(2){
-    font-size: 32px;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.faixa{
+.apelo3{
     background-color: var(--cor-secundaria);
     border-top: solid black 2px;
     display: flex;
@@ -253,16 +241,16 @@ nav a:hover::after {
     padding: 50px 0;
 }
 
-.faixa h2{
+.apelo3 h2{
     color: white;
-    font-size: 28px;
+    font-size: var(--tamanho-fonte6);
 }
 
 /*  */
 
 /* Conteudo */
 
-.donate{
+.doar{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -277,7 +265,7 @@ nav a:hover::after {
     padding: 15px;
 }
 
-.donate .dados{
+.doar .dados{
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -285,36 +273,37 @@ nav a:hover::after {
     justify-content: center;
 }
 
-.donate .qrcode img{
+.doar .qrcode img{
     width: 150px;
     border-radius: 25px;
 }
 
-.quemsomos{
+.quem-somos{
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 0 140px;
-    font-size: 18px;
+    font-size: var(--tamanho-fonte3);
     gap: 25px;
 }
 
-.quemsomos h1{
+.quem-somos h1{
     text-align: center;
 }
 
-.quemsomos p{
+.quem-somos p,
+.como-atuamos p{
     text-align: justify;
 }
 
-.quem{
+.quem-somos-texto{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 15px;
 }
 
-.somos{
+.quem-somos-fotos{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -323,22 +312,22 @@ nav a:hover::after {
     gap: 25px;
 }
 
-.somos img{
+.quem-somos-fotos img{
     height: 180px;
     border: solid black 2px;
 }
 
-.somos strong{
+.quem-somos-fotos strong{
     color: var(--cor-secundaria);
 }
 
-.diretores{
+.diretoria{
     display: flex;
     flex-direction: row;
     gap: 25px;
 }
 
-.diretores div{
+.diretoria div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -346,23 +335,19 @@ nav a:hover::after {
     width: 180px;
 }
 
-.diretores div .nome{
+.diretoria div .nome{
     margin: 5px 0;
 }
 
-.comoatuamos{
+.como-atuamos{
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 0px 140px;
     padding-bottom: 25px;
     gap: 15px;
-    font-size: 18px;
+    font-size: var(--tamanho-fonte3);
     background: linear-gradient(0deg, white 0%, white 0%, #D76978 100%);
-}
-
-.comoatuamos p{
-    text-align: justify;
 }
 
 .campanha{
@@ -394,14 +379,14 @@ footer img{
     height: 24px;
 }
 
-footer .contato .telefone{
+footer .contato .fone{
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 300px;
 }
 
-footer .contato .telefone div{
+footer .contato .fone div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -424,7 +409,7 @@ footer .contato .redes{
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    width: 300px;
+    max-width: 300px;
 }
 
 .redes a {
@@ -453,7 +438,7 @@ footer .dev{
 
 /* doação */
 
-.icone-doacao {
+.pop-donate {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -466,16 +451,16 @@ footer .dev{
     transition: transform 0.3s;
 }
 
-.icone-doacao:hover {
+.pop-donate:hover {
     transform: scale(1.1);
 }
 
-.icone-doacao img {
+.pop-donate img {
     width: 40px;
     height: 40px;
 }
 
-#qrCodeModal {
+#popQrCode {
     display: none;
     position: fixed;
     z-index: 1001;
@@ -488,7 +473,7 @@ footer .dev{
     align-items: center;
 }
 
-.qr-code-content {
+.conteudo-qrc-code {
     background-color: white;
     padding: 30px;
     border-radius: 15px;
@@ -496,7 +481,7 @@ footer .dev{
     position: relative;
 }
 
-.qr-code-content img {
+.conteudo-qrc-code img {
     width: 200px;
     height: 200px;
     margin-top: 10px;
@@ -506,7 +491,7 @@ footer .dev{
     position: absolute;
     top: 10px;
     right: 15px;
-    font-size: 24px;
+    font-size: var(--tamanho-fonte4);
     cursor: pointer;
     color: #333;
 }
@@ -520,7 +505,7 @@ footer .dev{
         gap: 10px;
     }
 
-    .fixed-nav ul{
+    .barra-fixa ul{
         padding-left: 0px;
     }
 
@@ -540,7 +525,7 @@ footer .dev{
     }
 
     .slide img{
-        max-width: 100%;
+        width: 100%;
     }
     
     .navegacao{
@@ -548,85 +533,88 @@ footer .dev{
         margin-top: 50%;
     }
     
-    .maxima h2{
+    .apelo h2{
         color: var(--cor-principal);
-        font-size: 24px;
+        font-size: var(--tamanho-fonte4);
         text-align: center;
     }
 
-    .maxima h2:nth-child(2){
-        font-size: 28px;
+    .apelo h2:nth-child(2){
+        font-size: var(--tamanho-fonte6);
         text-decoration: underline;
         font-weight: bold;
     }
 
-    .maxima2 h2{
+    .apelo2 h2{
         color: var(--cor-principal);
-        font-size: 24px;
+        font-size: var(--tamanho-fonte4);
         text-align: center;
     }
 
-    .maxima2 h2:nth-child(2){
-        font-size: 28px;
+    .apelo2 h2:nth-child(2){
+        font-size: var(--tamanho-fonte6);
         text-decoration: underline;
         font-weight: bold;
     }
 
-    .faixa{
+    .apelo3{
         padding: 50px 0;
     }
     
-    .faixa h2{
-        font-size: 24px;
+    .apelo3 h2{
+        font-size: var(--tamanho-fonte4);
     }
 
-    .donate{
+    .doar{
         border-radius: 0px;
         border: solid 0px black;
         width: 100%;
         margin-bottom: 35px;
     }
 
-    .quemsomos{
+    .quem-somos{
         padding: 0 50px;
-        font-size: 14px;
+        font-size: var(--tamanho-fonte1);
     }
 
-    .diretores{
+    .diretoria{
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .somos img{
+    .quem-somos-fotos img{
         height: 150px;
     }
 
-    .diretores div{
+    .diretoria div{
         width: 150px;
     }
 
-    .diretores div .nome{
-        font-size: 14px;
+    .diretoria div .nome{
+        font-size: var(--tamanho-fonte1);
         margin: 2px 0;
     }
 
-    .diretores div strong{
-        font-size: 14px;
+    .diretoria div strong{
+        font-size: var(--tamanho-fonte1);
     }
 
-    .comoatuamos{
+    .como-atuamos{
         padding: 0px 50px;
-        font-size: 14px;
+        font-size: var(--tamanho-fonte1);
         padding-bottom: 15px;
     }
 
     .campanha img{
         width: 100%;
         border-radius: 0px;
+        border: 0px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
     }
 
     footer{
-        font-size: 14px;
+        font-size: var(--tamanho-fonte1);
     }
 
     footer .contato{
@@ -638,7 +626,7 @@ footer .dev{
         height: 24px;
     }
 
-    footer .contato .telefone{
+    footer .contato .fone{
         width: 300px;
         align-items: center;
         justify-content: center;
@@ -679,71 +667,71 @@ footer .dev{
         margin-top: 240px;
     }
 
-    .quemsomos{
+    .quem-somos{
         padding: 0 70px;
-        font-size: 16px;
+        font-size: var(--tamanho-fonte2);
     }
 
-    .somos img{
+    .quem-somos-fotos img{
         height: 165px;
     }
 
-    .diretores div .nome{
-        font-size: 16px;
+    .diretoria div .nome{
+        font-size: var(--tamanho-fonte2);
     }
 
-    .diretores div strong{
-        font-size: 16px;
+    .diretoria div strong{
+        font-size: var(--tamanho-fonte2);
     }
 
-    .diretores div{
+    .diretoria div{
         width: 165px;
     }
 
-    .comoatuamos{
+    .como-atuamos{
         padding: 0px 70px;
         padding-bottom: 25px;
-        font-size: 16px;
+        font-size: var(--tamanho-fonte2);
     }
 
-.campanha{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+    .campanha{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
-.campanha img{
-    min-width: 400px;
-}
+    .campanha img{
+        min-width: 400px;
+    }
 
-footer{
-    font-size: 14px;
-}
+    footer{
+        font-size: var(--tamanho-fonte1);
+    }
 
-footer .contato{
-    gap: 5px;
-    flex-direction: column;
-}
+    footer .contato{
+        gap: 5px;
+        flex-direction: column;
+    }
 
-footer img{
-    height: 24px;
-}
+    footer img{
+        height: 24px;
+    }
 
-footer .contato .telefone{
-    width: 300px;
-    align-items: center;
-    justify-content: center;
-    padding: 0px;
-    padding-top: 25px;
-}
+    footer .contato .fone{
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        padding-top: 25px;
+    }
 
-footer .contato .loc{
-    width: 300px;
-}
+    footer .contato .loc{
+        width: 300px;
+    }
 
-footer .contato .redes{
-    justify-content: center;
-    width: 300px;
-    padding-bottom: 25px;
-}
+    footer .contato .redes{
+        justify-content: center;
+        width: 300px;
+        padding-bottom: 25px;
+    }
 }

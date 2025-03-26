@@ -2,10 +2,10 @@ let count = 1;
 document.getElementById("radio1").checked = true;
 
 setInterval(function(){
-    nextImage();
+    proxImage();
 }, 5000)
 
-function nextImage(){
+function proxImage(){
     count++;
     if(count > 4){
         count = 1;
@@ -16,21 +16,21 @@ function nextImage(){
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector("nav");
     const header = document.querySelector("header");
-    const navOffset = nav.offsetTop;
+    const travarBarra = nav.offsetTop;
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY >= navOffset) {
-            nav.classList.add("fixed-nav");
+        if (window.scrollY >= travarBarra) {
+            nav.classList.add("barra-fixa");
             header.style.marginBottom = `${nav.offsetHeight}px`;
         } else {
-            nav.classList.remove("fixed-nav");
+            nav.classList.remove("barra-fixa");
             header.style.marginBottom = "0";
         }
     });
 });
 
 function abrirQRCode() {
-    const modal = document.getElementById("qrCodeModal");
+    const modal = document.getElementById("popQrCode");
     modal.style.display = "flex";
 
     window.onclick = function(event) {
@@ -41,6 +41,6 @@ function abrirQRCode() {
 }
 
 function fecharQRCode() {
-    document.getElementById("qrCodeModal").style.display = "none";
+    document.getElementById("popQrCode").style.display = "none";
     window.onclick = null;
 }
